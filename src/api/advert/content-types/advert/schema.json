@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "adverts",
+  "info": {
+    "singularName": "advert",
+    "pluralName": "adverts",
+    "displayName": "advert"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fullName": {
+      "type": "string"
+    },
+    "adEmail": {
+      "type": "email"
+    },
+    "adPhoneNumber": {
+      "type": "string"
+    },
+    "Business": {
+      "type": "string"
+    },
+    "adService": {
+      "type": "text"
+    }
+  }
+}

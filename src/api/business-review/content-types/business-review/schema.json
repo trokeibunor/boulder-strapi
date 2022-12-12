@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "business_reviews",
+  "info": {
+    "singularName": "business-review",
+    "pluralName": "business-reviews",
+    "displayName": "businessReview"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "business": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::business.business",
+      "inversedBy": "business_reviews"
+    },
+    "reviewer": {
+      "type": "string"
+    },
+    "review": {
+      "type": "text"
+    },
+    "isApproved": {
+      "type": "boolean"
+    }
+  }
+}

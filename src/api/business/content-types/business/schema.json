@@ -1,0 +1,88 @@
+{
+  "kind": "collectionType",
+  "collectionName": "businesses",
+  "info": {
+    "singularName": "business",
+    "pluralName": "businesses",
+    "displayName": "Business",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "businessName": {
+      "type": "string"
+    },
+    "aboutBusiness": {
+      "type": "text"
+    },
+    "Category": {
+      "type": "enumeration",
+      "enum": [
+        "ARTS",
+        "BEAUTY",
+        "BOOK_DESIGNS",
+        "CONTRACTOR",
+        "EDUCATION",
+        "HOME_SERVICES",
+        "FARMS",
+        "HEALTH",
+        "HOTELS",
+        "INSURANCE",
+        "LAW",
+        "MANUFACTURERS",
+        "MARKETING",
+        "MEDICAL",
+        "REAL_ESTATE",
+        "RESTUARANTS",
+        "SHOPPING",
+        "THEATERS",
+        "WEAR_HOUSES",
+        "WELLNESS"
+      ]
+    },
+    "businessAddress": {
+      "type": "text"
+    },
+    "business_reviews": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::business-review.business-review",
+      "mappedBy": "business"
+    },
+    "businessImages": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "businessName"
+    },
+    "businessAvater": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "events": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::event.event",
+      "mappedBy": "business"
+    }
+  }
+}

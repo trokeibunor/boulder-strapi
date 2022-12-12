@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "singularName": "event",
+    "pluralName": "events",
+    "displayName": "Event",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "eventName": {
+      "type": "string"
+    },
+    "isVerified": {
+      "type": "boolean"
+    },
+    "eventAddress": {
+      "type": "text"
+    },
+    "ticketPrice": {
+      "type": "string"
+    },
+    "eventDate": {
+      "type": "datetime"
+    },
+    "ticketLink": {
+      "type": "string"
+    },
+    "aboutEvent": {
+      "type": "text"
+    },
+    "eventGallery": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "business": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::business.business",
+      "inversedBy": "events"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bloggers",
+  "info": {
+    "singularName": "blogger",
+    "pluralName": "bloggers",
+    "displayName": "blogger"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "bloggerEmail": {
+      "type": "email"
+    },
+    "blogs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blog.blog",
+      "mappedBy": "blogger"
+    },
+    "aboutBlogger": {
+      "type": "text"
+    },
+    "isApproved": {
+      "type": "boolean"
+    }
+  }
+}
